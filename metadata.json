@@ -1,0 +1,6 @@
+{
+  "name": "Euler 3D",
+  "description": "High-fidelity interactive physics and vector simulation laboratory featuring Ballistic Drag Mechanics, Thin Lens Ray Optics, Aerodynamic Airfoil Stall, 3D Dzhanibekov Effect, 3D Lorentz Magnetic Mirror, and Orbital Gravity.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

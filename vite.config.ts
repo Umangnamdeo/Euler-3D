@@ -5,7 +5,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: '/Euler-3D/',
+    base: process.env.BASE_URL || './',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
