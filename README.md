@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://Umangnamdeo.github.io/Euler-3d/"><strong>Explore Live Simulation »</strong></a>
+  <a href="https://umangnamdeo.github.io/Euler-3D/"><strong>Explore Live Simulation »</strong></a>
 </p>
 
 ---
