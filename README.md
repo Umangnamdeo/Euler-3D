@@ -1,7 +1,7 @@
 # Euler 3D
 
 <p align="center">
-  <img src="./logo (2).png" alt="Euler 3D Logo" width="450" />
+  <img src="./logo.png" alt="Euler 3D Logo" width="450" />
 </p>
 
 <p align="center">
