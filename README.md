@@ -1,32 +1,7 @@
 # Euler 3D
 
 <p align="center">
-  <svg width="140" height="140" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <!-- Dark Background Glow -->
-    <circle cx="100" cy="100" r="85" fill="#0b0f19" stroke="#1f293d" stroke-width="2"/>
-    <circle cx="100" cy="100" r="65" stroke="#3b82f6" stroke-width="1" stroke-dasharray="4 4" opacity="0.4"/>
-    
-    <!-- Isometric Cube Frame (Euler Grid) -->
-    <!-- Top Face -->
-    <polygon points="100,50 145,75 100,100 55,75" fill="#1e293b" stroke="#60a5fa" stroke-width="2" opacity="0.9"/>
-    <!-- Left Face -->
-    <polygon points="55,75 100,100 100,150 55,125" fill="#0f172a" stroke="#3b82f6" stroke-width="2" opacity="0.8"/>
-    <!-- Right Face -->
-    <polygon points="100,100 145,75 145,125 100,150" fill="#172554" stroke="#2563eb" stroke-width="2" opacity="0.8"/>
-    
-    <!-- Coordinate Axis / Vectors (3D Field Forces) -->
-    <line x1="100" y1="100" x2="100" y2="40" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
-    <polygon points="100,34 96,44 104,44" fill="#38bdf8"/>
-    
-    <line x1="100" y1="100" x2="155" y2="132" stroke="#818cf8" stroke-width="3" stroke-linecap="round"/>
-    <polygon points="160,135 150,135 154,127" fill="#818cf8"/>
-    
-    <line x1="100" y1="100" x2="45" y2="132" stroke="#a855f7" stroke-width="3" stroke-linecap="round"/>
-    <polygon points="40,135 46,127 50,135" fill="#a855f7"/>
-    
-    <!-- Core Center Origin -->
-    <circle cx="100" cy="100" r="4.5" fill="#ffffff"/>
-  </svg>
+  <img src="https://raw.githubusercontent.com/Umangnamdeo/Euler-3d/main/logo.png" alt="Euler 3D Logo" width="160" />
 </p>
 
 <p align="center">
