@@ -1,5 +1,5 @@
 {
-  "name": "react-example",
+  "name": "euler-3d",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,8 +10,7 @@
     "clean": "rm -rf dist server.js",
     "lint": "tsc --noEmit"
   },
-  "dependencies": {
-    "@google/genai": "^2.4.0",
+  "dependencies": 
     "@tailwindcss/vite": "^4.1.14",
     "@types/canvas-confetti": "^1.9.0",
     "@types/three": "^0.185.4",
