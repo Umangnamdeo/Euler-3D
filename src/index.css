@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #05070a;
+    color: #a0aec0;
+  }
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Immersive UI Dot Grid & Glows */
+.immersive-grid {
+  background-image: radial-gradient(#ffffff 0.5px, transparent 0.5px);
+  background-size: 24px 24px;
+}
+
+.glow-cyan {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.35);
+}
+
+.glow-purple {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.35);
+}
+
+.glow-text-cyan {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+.glow-text-purple {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+/* Custom dark scrollbars matching #05070a and #1a1f2e */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #05070a;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a1f2e;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
