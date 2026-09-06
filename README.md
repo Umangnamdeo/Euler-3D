@@ -1,8 +1,3 @@
-Here is the exact, complete **`README.md`** code. It embeds that exact banner image directly into the file using raw SVG code, so you do **not** need to upload any image file—it will render instantly on GitHub without breaking.
-
-Copy and paste this entire block directly into your `README.md` file:
-
-```markdown
 # Euler 3D
 
 <p align="center">
@@ -91,30 +86,3 @@ To run or modify the project locally:
 1. Clone the repository:
    ```bash
    git clone [https://github.com/Umangnamdeo/Euler-3d.git](https://github.com/Umangnamdeo/Euler-3d.git)
-
-```
-
-2. Navigate into the root directory:
-```bash
-cd Euler-3d
-
-```
-
-
-3. Open `index.html` in your web browser (or use the VS Code **Live Server** extension).
-
----
-
-## 📄 License & Attribution
-
-Copyright (c) 2026 Umang Namdeo.
-
-This project is licensed under the **Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)**.
-
-* **Attribution:** You are free to view, study, and fork this project for personal and educational purposes, provided clear credit and a link to this original repository are retained.
-* **Non-Commercial:** You may **not** use this software, its assets, or its code for commercial purposes, monetized platforms, or closed-source paid software.
-* **Commercial Inquiries:** To license Euler 3D for commercial use, integration, or monetization, please contact the author directly via [GitHub Profile](https://www.google.com/search?q=https://github.com/Umangnamdeo).
-
-```
-
-```
