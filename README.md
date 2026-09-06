@@ -22,13 +22,7 @@ By leveraging WebGL and custom GLSL fragment shaders, continuous partial differe
 
 ---
 
-## 🚀 Live Demo
 
-You can interact with the simulation directly on GitHub Pages:
-
-👉 **[https://Umangnamdeo.github.io/Euler-3d/](https://Umangnamdeo.github.io/Euler-3d/)**
-
----
 
 ## ✨ Features
 
@@ -48,10 +42,3 @@ You can interact with the simulation directly on GitHub Pages:
 
 ---
 
-## 💻 Local Development Setup
-
-To run or modify the project locally:
-
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/Umangnamdeo/Euler-3d.git](https://github.com/Umangnamdeo/Euler-3d.git)
