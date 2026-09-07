@@ -32,7 +32,7 @@ jobs:
       - name: Build Vite application
         env:
           VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL || 'https://lxpdagwjgzjttddvleku.supabase.co' }}
-          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx4cGRhZ3dqZ3pqdHRkZHZsZWt1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI5NTQyMjAsImV4cCI6MjA4ODUzMDIyMH0.nK57hX6v02u8i7JzO2t2zJ5K2Zq-f_yE_bE6xM8m5m0' }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx4cGRhZ3dqZ3pqdHRkZHZsZWt1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg3NjM1MzgsImV4cCI6MjEwNDMzOTUzOH0.L05YHkSFaGMr_Az30m65VvTbx8QLJ_zVAdFReyd_QXM' }}
         run: npm run build
 
       - name: Upload GitHub Pages artifact
