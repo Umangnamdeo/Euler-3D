@@ -14,18 +14,23 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { LabId } from '../types';
+import { useAuth } from '../hooks/useSupabase';
+import { Database, User } from 'lucide-react';
 
 interface HeaderProps {
   activeLab: LabId;
   onSelectLab: (id: LabId) => void;
   onOpenFormulas: () => void;
+  onOpenAuth: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
   activeLab,
   onSelectLab,
   onOpenFormulas,
+  onOpenAuth,
 }) => {
+  const { user } = useAuth();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showGuidePopup, setShowGuidePopup] = useState(true);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -137,6 +142,23 @@ export const Header: React.FC<HeaderProps> = ({
 
         {/* Right side utilities */}
         <div className="flex items-center gap-2 shrink-0">
+          {/* Cloud Auth / Presets button */}
+          <button
+            id="header-supabase-btn"
+            onClick={onOpenAuth}
+            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-mono font-medium text-white bg-[#111622] hover:bg-[#1a1f2e] border border-[#1a1f2e] hover:border-emerald-500/40 transition-all group"
+            title={user ? `Signed in as ${user.email}` : 'Sign In / Supabase Cloud Auth'}
+          >
+            {user ? (
+              <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            ) : (
+              <Database className="w-3.5 h-3.5 text-emerald-400 group-hover:scale-110 transition-transform" />
+            )}
+            <span className="text-[11px] tracking-wider uppercase font-semibold">
+              {user ? (user.email?.split('@')[0] || 'Cloud') : 'Cloud'}
+            </span>
+          </button>
+
           <button
             id="header-open-formulas-btn"
             onClick={onOpenFormulas}

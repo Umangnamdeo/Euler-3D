@@ -10,7 +10,8 @@ import {
   Sparkles,
   Flame,
   Zap,
-  Clock
+  Clock,
+  Cloud
 } from 'lucide-react';
 import { LabId, SimulationState } from '../types';
 
@@ -22,6 +23,7 @@ interface BottomControllerProps {
   onReset: () => void;
   onChangeTimeScale: (scale: number) => void;
   onOpenFormulas: () => void;
+  onOpenPresets?: () => void;
 }
 
 const LAB_TITLES: Record<LabId, { num: string; name: string; tag: string }> = {
@@ -42,6 +44,7 @@ export const BottomController: React.FC<BottomControllerProps> = ({
   onReset,
   onChangeTimeScale,
   onOpenFormulas,
+  onOpenPresets,
 }) => {
   const currentLab = LAB_TITLES[activeLab];
 
@@ -144,6 +147,18 @@ export const BottomController: React.FC<BottomControllerProps> = ({
 
         {/* Right: Formulas & Hotkey hints */}
         <div className="flex items-center gap-2 pr-1">
+          {onOpenPresets && (
+            <button
+              id="bottom-presets-btn"
+              onClick={onOpenPresets}
+              className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-mono font-medium text-emerald-400 bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 transition-all active:scale-95"
+              title="Open Supabase Cloud Presets Vault"
+            >
+              <Cloud className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline tracking-wider uppercase">PRESETS</span>
+            </button>
+          )}
+
           <button
             id="bottom-formulas-btn"
             onClick={onOpenFormulas}

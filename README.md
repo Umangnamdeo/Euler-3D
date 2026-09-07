@@ -37,8 +37,26 @@ By leveraging WebGL and custom GLSL fragment shaders, continuous partial differe
 
 * **Rendering Engine:** WebGL / Three.js
 * **Shading Language:** GLSL (Fragment & Vertex Shaders)
-* **Frontend Logic:** Modern JavaScript (ES6+), HTML5 Canvas
+* **Frontend Logic:** Modern JavaScript (ES6+), React 19, TypeScript, Tailwind CSS
+* **Backend & Auth:** Supabase (PostgreSQL with Row-Level Security)
 * **Deployment:** GitHub Pages
+
+---
+
+## 🗄️ Supabase Backend Setup
+
+Euler 3D comes with full Supabase integration for authentication and cloud preset storage:
+
+1. Create a Supabase project at [supabase.com](https://supabase.com).
+2. Run the SQL script from `supabase-schema.sql` in the Supabase SQL Editor.
+3. Add your credentials to `.env`:
+   ```env
+   VITE_SUPABASE_URL=https://your-project.supabase.co
+   VITE_SUPABASE_ANON_KEY=your-anon-key
+   ```
+4. Configure Site URL & Redirect URLs under **Authentication** -> **URL Configuration**:
+   - `https://umangnamdeo.github.io/Euler-3D/`
+   - `http://localhost:3000/`
 
 ---
 

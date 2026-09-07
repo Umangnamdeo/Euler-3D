@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Header } from './components/Header';
 import { BottomController } from './components/BottomController';
 import { FormulaModal } from './components/FormulaModal';
+import { AuthModal } from './components/AuthModal';
+import { PresetsModal } from './components/PresetsModal';
 import { BallisticsLab } from './components/labs/BallisticsLab';
 import { OpticsLab } from './components/labs/OpticsLab';
 import { AirfoilLab } from './components/labs/AirfoilLab';
@@ -11,10 +13,13 @@ import { LorentzLab } from './components/labs/LorentzLab';
 import { ChaosPendulumLab } from './components/labs/ChaosPendulumLab';
 import { OrbitalLab } from './components/labs/OrbitalLab';
 import { LabId, SimulationState } from './types';
+import { SavedSimulationPreset } from './lib/supabase';
 
 export default function App() {
   const [activeLab, setActiveLab] = useState<LabId>('ballistics');
   const [isFormulaModalOpen, setIsFormulaModalOpen] = useState<boolean>(false);
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState<boolean>(false);
+  const [isPresetsModalOpen, setIsPresetsModalOpen] = useState<boolean>(false);
 
   const [simState, setSimState] = useState<SimulationState>({
     isRunning: true,
@@ -98,6 +103,7 @@ export default function App() {
           activeLab={activeLab}
           onSelectLab={setActiveLab}
           onOpenFormulas={() => setIsFormulaModalOpen(true)}
+          onOpenAuth={() => setIsAuthModalOpen(true)}
         />
       </div>
 
@@ -131,6 +137,7 @@ export default function App() {
         onReset={resetSimulation}
         onChangeTimeScale={changeTimeScale}
         onOpenFormulas={() => setIsFormulaModalOpen(true)}
+        onOpenPresets={() => setIsPresetsModalOpen(true)}
       />
 
       {/* Theoretical Formulations & Equations Modal */}
@@ -138,6 +145,22 @@ export default function App() {
         isOpen={isFormulaModalOpen}
         onClose={() => setIsFormulaModalOpen(false)}
         activeLab={activeLab}
+      />
+
+      {/* Supabase Cloud Authentication Modal */}
+      <AuthModal
+        isOpen={isAuthModalOpen}
+        onClose={() => setIsAuthModalOpen(false)}
+      />
+
+      {/* Supabase Simulation Preset Vault Modal */}
+      <PresetsModal
+        isOpen={isPresetsModalOpen}
+        onClose={() => setIsPresetsModalOpen(false)}
+        activeLab={activeLab}
+        currentParams={{}}
+        onLoadPreset={() => {}}
+        onOpenAuth={() => setIsAuthModalOpen(true)}
       />
 
       {/* Signature */}
